@@ -251,7 +251,8 @@ Progressive Testing - Start simple, escalate based on results
 Encoding Variations - Bypass basic filters
 DOM-based Detection - Requires browser simulation
 Event Handler Coverage - Test all possible event handlers
-4. Directory Traversal Testing:
+ 
+ 4. Directory Traversal Testing:
 Concept: Accessing files outside the web root directory.
 
 What it tests:
