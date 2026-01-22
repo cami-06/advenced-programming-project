@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Scan Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        .high { color: red; }
+        .medium { color: orange; }
+        .low { color: green; }
+    </style>
+</head>
+<body>
+
+<h1>Security Scan Report</h1>
+
+<p><strong>Target:</strong> {{ target }}</p>
+<p><strong>Scan date:</strong> {{ scan_date }}</p>
+
+<h2>Summary</h2>
+<ul>
+    <li>Total findings: {{ summary.total }}</li>
+    {% for severity, count in summary.by_severity.items() %}
+        <li>{{ severity }}: {{ count }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Findings</h2>
+
+{% if findings %}
+    <ul>
+    {% for f in findings %}
+        <li>
+            <strong>{{ f.issue }}</strong><br>
+            URL: {{ f.url }}<br>
+            Severity: <span class="{{ f.severity | lower }}">{{ f.severity }}</span><br>
+            Evidence: {{ f.evidence }}
+        </li>
+        <hr>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No vulnerabilities found 🎉</p>
+{% endif %}
+
+</body>
+</html>
