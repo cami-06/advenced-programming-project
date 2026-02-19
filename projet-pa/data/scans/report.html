@@ -9,8 +9,8 @@
         .high { color: red; }
         .medium { color: orange; }
         .low { color: green; }
-        .critical { color: darkred; font-weight: bold; }
-
+        .critical { color: blueviolet; }
+        
     </style>
 </head>
 <body>
@@ -18,13 +18,13 @@
 <h1>Security Scan Report</h1>
 
 <p><strong>Target:</strong> None</p>
-<p><strong>Scan date:</strong> 2026-02-04 16:58:51</p>
+<p><strong>Scan date:</strong> 2026-02-15 13:09:51</p>
 
 <h2>Summary</h2>
 <ul>
-    <li>Total findings: 50</li>
+    <li>Total findings: 49</li>
     
-        <li>MEDIUM: 5</li>
+        <li>MEDIUM: 4</li>
     
         <li>CRITICAL: 10</li>
     
@@ -48,14 +48,6 @@
         <li>
             <strong>Login form without CSRF protection</strong><br>
             URL: http://testphp.vulnweb.com/userinfo.php<br>
-            Severity: <span class="medium">MEDIUM</span><br>
-            Evidence: No CSRF token detected
-        </li>
-        <hr>
-    
-        <li>
-            <strong>Login form without CSRF protection</strong><br>
-            URL: http://testphp.vulnweb.com/signup.php<br>
             Severity: <span class="medium">MEDIUM</span><br>
             Evidence: No CSRF token detected
         </li>
